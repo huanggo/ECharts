@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+// 声明图标字体
+@font-face{
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+}
+body{
+    // min-width: 1024px;
+    background: url(../img/bg.jpg) no-repeat top center;
+    background-origin: 100% 100%;
+    line-height: 1.15;
+}
+header{
+    position: relative;
+    height:1.25rem;
+    background: url(../img/head_bg.png) no-repeat;
+    background-origin: 100% 100%;
+    h1{
+        font-size: .475rem;
+        color: #fff;
+        text-align: center;
+        line-height: 1rem;
+    }
+    .showtime{
+        position: absolute;
+        right: .375rem;
+        top:0;
+        line-height: .9375rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.25rem;
+
+    }
+}
+// 页面主题
+.mainbox{
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 300px;
+   padding: .125rem .125rem 0;
+   .column{
+       flex:3;
+       position: relative;
+   }
+   .column:nth-child(2){
+    flex:5;
+    margin: .125rem .1875rem;
+    // overflow: hidden;
+   }
+   .panel{
+       position: relative;
+       height: 3.875rem;
+       padding: 0 .1875rem .5rem;
+       border:1px solid rgba(25, 186, 139, 0.17);
+       background: url(../img/line\(1\).png) rgba(255, 255, 255, 0.03);
+       margin-bottom:15px;
+       &::before{
+           position: absolute;
+           left:0;
+           top: 0;
+           width: 10px;
+           height: 10px;
+           border-left: 2px solid #02a6b5;
+           border-top: 2px solid #02a6b5;
+           content: ' ';
+       }
+       &::after{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #02a6b5;
+        border-top: 2px solid #02a6b5;
+        content: ' ';
+    }
+    .panel-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        &::before{
+            position: absolute;
+            left:0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid #02a6b5;
+            border-bottom: 2px solid #02a6b5;
+            content: ' ';
+        }
+        &::after{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #02a6b5;
+            border-bottom: 2px solid #02a6b5;
+            content: ' ';
+        }
+    }
+    h2{
+        height: .6rem;
+        color: #fff;
+        font-size: .25rem;
+        line-height: .6rem;
+        text-align: center;
+        font-weight: 400;
+        a{
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.125rem;
+        }
+    }
+    .chart{
+        height: 3rem;
+        // background-color:pink;
+    }
+   }
+}
+// no数字模块
+.no{
+    background: rgba(101, 131, 226, 0.1);
+    padding: .1875rem;
+    .no-hd{
+       position: relative;
+       border:1px solid rgba(25, 186, 139, 0.17);
+       &::before{
+           position: absolute;
+           top:0;
+           left:0;
+           content:"";
+           width: 30px;
+           height: 10px;
+           border-top:2px solid #02a6b5;
+           border-left:2px solid #02a6b5;
+       }
+       &::after{
+        position: absolute;
+        bottom: 0;
+        right:0;
+        content:"";
+        width: 30px;
+        height: 10px;
+        border-right:2px solid #02a6b5;
+        border-bottom:2px solid #02a6b5;
+    }
+       ul {
+           display: flex;
+           li{
+               position: relative;
+              
+               flex: 1;
+               line-height: 1rem;
+               font-size: .875rem;
+               color: #ffeb7b;
+               font-family:"electronicFont" ;
+               text-align: center;
+               &::after{
+                   content: "";
+                   position: absolute;
+                   right: 0;
+                   top:25%;
+                   height: 50%;
+                   width: 1px;
+                   background-color: rgba(255, 255, 255, 0.2);
+               }
+           }
+       }
+
+    }
+    .no-bd{
+       ul{
+           display: flex;
+           li{
+               flex: 1;
+               text-align: center;
+               color: rgba(255, 255, 255, 0.7);
+               font-size: .225rem;
+               height: .5rem;
+               line-height: .5rem;
+               padding-top: .125rem;
+           }
+       }
+    }
+}
+
+// 地图
+.map{
+    height: 10.125rem;
+    position: relative;
+    .map1{
+        width: 6.475rem;
+        height: 6.475rem;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        background: url("../img/map.png") no-repeat center center;
+        background-size:100% 100%;
+        opacity: .3;
+        
+    }
+    .map2{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        width: 8.0375rem;
+        height: 8.0375rem;
+        background: url("../img/lbx.png");
+        background-size:100% 100%;
+        animation: rotate1 15s linear infinite;
+        opacity: .6;
+
+    }
+    .map3{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        width: 7.075rem;
+        height: 7.075rem;
+        background: url("../img/jt.png");
+        background-size:100% 100%;
+        opacity: .6;
+        animation: rotate2 15s linear infinite;
+    }
+    .chats{
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 10.125rem;
+        // background-color: blue;
+    }
+    @keyframes rotate1 {
+        form{
+            transform: translate(-50%,-50%)
+            rotate(0deg);
+        }
+        to{
+            transform: translate(-50%,-50%)
+            rotate(360deg);
+        }
+    }
+    @keyframes rotate2 {
+        form{
+            transform: translate(-50%,-50%)
+            rotate(0deg);
+        }
+        to{
+            transform: translate(-50%,-50%)
+            rotate(-360deg);
+        }
+    }
+}
